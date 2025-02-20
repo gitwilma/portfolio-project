@@ -1,12 +1,12 @@
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header>
-        <h1 className="p-2 text-black text-9xl">Welcome to my portfolio</h1>
-      </header>
+      <Navbar />
+      <header></header>
       <main className="flex-grow container mx-auto px-4">
         <Outlet />
       </main>
