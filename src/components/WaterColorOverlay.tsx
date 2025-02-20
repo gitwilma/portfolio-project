@@ -2,9 +2,15 @@ import { useEffect, useRef, useState } from "react";
 
 interface WatercolorOverlayProps {
   imageSrc: string;
+  className?: string;
+  size?: string;
 }
 
-const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({ imageSrc }) => {
+const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
+  imageSrc,
+  className,
+  size = "200px",
+}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -14,15 +20,15 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({ imageSrc }) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const size = 200; // Anpassa efter bildens storlek
-    canvas.width = size;
-    canvas.height = size;
+    const sizeInt = parseInt(size, 10);
+    canvas.width = sizeInt;
+    canvas.height = sizeInt;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Cirkel
     ctx.beginPath();
-    ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+    ctx.arc(sizeInt / 2, sizeInt / 2, sizeInt / 2, 0, Math.PI * 2);
     ctx.clip();
 
     const colors = [
@@ -33,8 +39,8 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({ imageSrc }) => {
 
     // Ritar flera akvarellfläckar INOM cirkeln
     for (let i = 0; i < 8; i++) {
-      const x = Math.random() * size;
-      const y = Math.random() * size;
+      const x = Math.random() * sizeInt;
+      const y = Math.random() * sizeInt;
       const radius = Math.random() * 50 + 30;
       const color = colors[Math.floor(Math.random() * colors.length)];
 
@@ -44,13 +50,14 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({ imageSrc }) => {
       ctx.filter = "blur(15px)"; // Suddar ut för akvarell-effekt
       ctx.fill();
     }
-  }, []);
+  }, [size]);
 
   return (
     <div
-      className="relative w-[200px] h-[200px]"
+      className={`relative ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{ width: size, height: size }}
     >
       <canvas
         ref={canvasRef}
