@@ -25,7 +25,7 @@ export default function Home() {
         <WatercolorOverlay
           imageSrc="/assets/cv-image.png"
           className="rounded-full"
-          size="300px" // Här kan du ändra storleken
+          size="300px"
         />
       </div>
     </div>
