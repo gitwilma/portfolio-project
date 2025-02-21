@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface WatercolorOverlayProps {
   imageSrc: string;
@@ -12,6 +12,8 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
   size = "200px",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [cleared, setCleared] = useState(false);
+  const [eraseCount, setEraseCount] = useState(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -56,6 +58,7 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
       ctx.arc(x, y, 40, 0, Math.PI * 2);
       ctx.fill();
       ctx.globalCompositeOperation = "source-over";
+      setEraseCount((prev) => prev + 1);
     };
 
     const handleMouseMove = (event: MouseEvent) => {
@@ -70,6 +73,12 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
     };
   }, [size]);
 
+  useEffect(() => {
+    if (eraseCount > 200) {
+      setCleared(true);
+    }
+  }, [eraseCount]);
+
   return (
     <div
       className={`relative ${className}`}
@@ -77,7 +86,9 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
     >
       <canvas
         ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-full rounded-full"
+        className={`absolute top-0 left-0 w-full h-full rounded-full transition-opacity duration-500 ${
+          cleared ? "opacity-0" : "opacity-100"
+        }`}
       />
       <img
         src={imageSrc}
