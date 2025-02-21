@@ -39,12 +39,19 @@ export default function Home() {
           onClick={handleCircleClick}
         >
           <div className="bg-relative w-full h-full mt-16 p-24">
-            <div className="w-40 h-40 bg-purple-600 rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105">
+            <div className="w-90 h-90 bg-pink-300 rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-170 mt-20">
               <span className="text-white text-xl font-bold">Projects</span>
             </div>
-            <h2 className="mt-4 text-lg text-gray-700">
-              Click to see my projects
-            </h2>
+          </div>
+          <div className="bg-relative w-full h-full mt-16 p-24">
+            <div className="w-90 h-90 bg-green-200 rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-10 mt-5">
+              <span className="text-white text-xl font-bold">About</span>
+            </div>
+          </div>
+          <div className="bg-relative w-full h-full mt-16 p-24">
+            <div className="w-90 h-90 bg-purple-300 rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-180 mt-5">
+              <span className="text-white text-xl font-bold">Contact</span>
+            </div>
           </div>
         </div>
       </section>
