@@ -1,6 +1,11 @@
 import WatercolorOverlay from "../components/WaterColorOverlay";
+// import { useRouter } from "next/router"; // För att navigera mellan sidor
 
 export default function Home() {
+  const handleCircleClick = () => {
+    // router.push("/projects"); // Byt till din projects-sida här
+  };
+
   return (
     <div className="relative py-8">
       {/* S-formad text */}
@@ -28,6 +33,21 @@ export default function Home() {
           size="300px"
         />
       </div>
+      <section>
+        <div
+          className="cursor-pointer flex flex-col items-end"
+          onClick={handleCircleClick}
+        >
+          <div className="bg-relative w-full h-full mt-16 p-24">
+            <div className="w-40 h-40 bg-purple-600 rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105">
+              <span className="text-white text-xl font-bold">Projects</span>
+            </div>
+            <h2 className="mt-4 text-lg text-gray-700">
+              Click to see my projects
+            </h2>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
