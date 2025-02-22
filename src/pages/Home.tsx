@@ -1,5 +1,3 @@
-import WatercolorOverlay from "../components/WaterColorOverlay";
-
 export default function Home() {
   const handleCircleClick = () => {
     // router.push("/projects"); //
@@ -25,20 +23,46 @@ export default function Home() {
       </svg>
 
       <div className="absolute top-[260px] left-[250px]">
-        <WatercolorOverlay
-          imageSrc="/assets/cv-image.png"
-          className="rounded-full"
-          size="300px"
+        <img
+          src="/assets/cv-image.png"
+          alt="CV Image"
+          className="rounded-full w-[300px] h-[300px]"
         />
       </div>
 
       {/* Connecting line mellan bild och Projects */}
-      <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
+      <svg className="absolute w-full h-full top-0 left-0">
         <path
           d={`
             M 400,560 
             C 500,800 700,700 860,800
             `}
+          stroke="gray"
+          strokeWidth="1"
+          fill="transparent"
+        />
+      </svg>
+
+      {/* Connecting line mellan projects och about */}
+      <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
+        <path
+          d={`
+      M 860,1100
+      C 800,1400 250,1450 490,1600
+    `}
+          stroke="gray"
+          strokeWidth="1"
+          fill="transparent"
+        />
+      </svg>
+
+      {/* Connecting line mellan about och contact */}
+      <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
+        <path
+          d={`
+      M 490,1600
+      C 700,1650 650,1950 900,2100
+    `}
           stroke="gray"
           strokeWidth="1"
           fill="transparent"
