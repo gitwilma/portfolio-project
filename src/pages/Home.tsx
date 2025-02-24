@@ -14,7 +14,12 @@ export default function Home() {
           fill="transparent"
           strokeWidth="1"
         />
-        <text fontSize="80" fill="black" fontFamily="NewYork">
+        <text
+          fontSize="80"
+          fill="currentColor"
+          fontFamily="NewYork"
+          className="dark-text"
+        >
           <textPath href="#s-curve" startOffset="1%" textAnchor="start">
             Welcome to my portfolio!
           </textPath>
