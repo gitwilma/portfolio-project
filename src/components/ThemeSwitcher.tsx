@@ -26,11 +26,14 @@ const ThemeSwitcher = () => {
     <button
       onClick={toggleTheme}
       className={`w-12 h-12 rounded-full p-2 flex items-center justify-center transition-all duration-300 transform ml-45 mt-10
-        ${theme === "light" ? "bg-black" : "bg-[#F4E1C4]"} 
-        shadow-lg hover:shadow-2xl 
-        focus:outline-none hover:scale-105 cursor-pointer`}
+    ${
+      theme === "light"
+        ? "bg-black shadow-[0_0_15px_rgba(255,215,0,0.8)]"
+        : "bg-[#F4E1C4] shadow-[0_0_15px_rgba(244,161,97,0.8)]"
+    } 
+    hover:shadow-2xl focus:outline-none hover:scale-105 cursor-pointer`}
       style={{
-        transform: theme === "light" ? "translateX(0)" : "translateX(16px)", // Flyttar cirkeln
+        transform: theme === "light" ? "translateX(0)" : "translateX(16px)",
       }}
     >
       <span

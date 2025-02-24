@@ -4,7 +4,6 @@ body.dark {
   background-color: #1C0F13 !important;
 }
 
-/* Mörkt tema för navbar */
 body.dark nav {
   background-color: #1C0F13 !important;
   color: #F4E1C4 !important;
@@ -40,6 +39,45 @@ body.dark footer a:hover {
   color: gray !important;
 }
 
+body.dark h2,
+body.dark p {
+  color: #F4E1C4;
+}
+
+.dark label {
+  color: #F8D8B0; 
+}
+
+.dark input,
+.dark textarea {
+  background-color: #6B5B4D; 
+  border: 1px solid #8D7B68; 
+  color: #FCEBD5; 
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #C5A991; 
+}
+
+.dark button {
+  background-color: #D99A5C;
+  color: #2D1B0D; 
+}
+
+.dark button:hover {
+  background-color: #E3A876; 
+  box-shadow: 0 0 15px rgba(244, 161, 97, 0.7); 
+}
+
+
+.dark svg text {
+  fill: #f4e1c4; 
+}
+
+.dark svg path {
+  stroke: #f4e1c4;
+}
 
 
 @font-face {
