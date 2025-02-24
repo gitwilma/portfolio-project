@@ -3,6 +3,20 @@
 @font-face {
     font-family: "Agoka";
     src: url("/assets/AgokaFamily.otf") format("truetype"); 
+    font-weight: normal, bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "NewYork";
+    src: url("/assets/NewYork.otf") format("truetype"); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Kiona-Regular";
+    src: url("/assets/Kiona-Regular.ttf") format("truetype"); 
     font-weight: normal;
     font-style: normal;
   }

@@ -15,7 +15,7 @@ export default function Home() {
           fill="transparent"
           strokeWidth="1"
         />
-        <text fontSize="90" fill="black" fontFamily="AgokaFont">
+        <text fontSize="80" fill="black" fontFamily="NewYork">
           <textPath href="#s-curve" startOffset="1%" textAnchor="start">
             Welcome to my portfolio!
           </textPath>
@@ -74,26 +74,26 @@ export default function Home() {
           className="cursor-pointer flex flex-col items-end"
           onClick={handleCircleClick}
         >
-          {/* Projects */}
+          {/* About */}
           <div className="relative w-full h-full mt-16 p-24">
             <div
               className="w-90 h-90 bg-black rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-170 mt-20 relative"
-              id="projects-circle"
+              id="about-circle"
             >
-              <span className="text-white text-xl font-bold">Projects</span>
+              <span className="text-white text-xl font-bold">About</span>
               {/* Små bubblor */}
               <div className="absolute w-15 h-15 bg-black rounded-full bottom-2 right-3 pulsing-bubble"></div>
               <div className="absolute w-10 h-10 bg-black rounded-full bottom-4 right-4 pulsing-bubble"></div>
             </div>
           </div>
 
-          {/* About */}
+          {/* Projects */}
           <div className="relative w-full h-full mt-16 p-24">
             <div
               className="w-90 h-90 bg-black rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-10 mt-5 relative"
-              id="about-circle"
+              id="project-circle"
             >
-              <span className="text-white text-xl font-bold">About</span>
+              <span className="text-white text-xl font-bold">Projects</span>
               {/* Små bubblor */}
               <div className="absolute w-11 h-11 bg-black rounded-full bottom-3 left-3 pulsing-bubble"></div>
               <div className="absolute w-8 h-8 bg-black rounded-full bottom-2 left-2 pulsing-bubble"></div>
