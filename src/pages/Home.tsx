@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import Circle from "../components/Circle";
+import ConnectingLines from "../components/ConnectingLines";
 
 export default function Home() {
   return (
@@ -28,86 +29,14 @@ export default function Home() {
         />
       </div>
 
-      {/* Connecting lines Bild-About */}
-      <svg className="absolute w-full h-full top-0 left-0">
-        <path
-          d={`
-            M 400,560 
-            C 500,800 700,700 860,800
-            `}
-          stroke="gray"
-          strokeWidth="1"
-          fill="transparent"
-        />
-      </svg>
-      {/* Connecting lines About-Projects */}
-      <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
-        <path
-          d={`
-            M 860,1100
-            C 800,1400 250,1450 490,1600
-          `}
-          stroke="gray"
-          strokeWidth="1"
-          fill="transparent"
-        />
-      </svg>
-      {/* Connecting lines Projects-Contact */}
-      <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
-        <path
-          d={`
-            M 490,1600
-            C 700,1650 650,1950 900,2100
-          `}
-          stroke="gray"
-          strokeWidth="1"
-          fill="transparent"
-        />
-      </svg>
+      {/* Connecting Lines */}
+      <ConnectingLines />
 
       <section>
         <div className="cursor-pointer flex flex-col items-end">
-          {/* About */}
-          <div className="relative w-full h-full mt-16 p-24">
-            <Link
-              to="/about"
-              className="w-90 h-90 bg-black rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-170 mt-20 relative"
-              id="about-circle"
-            >
-              <span className="text-white text-xl font-bold">About</span>
-              {/* Små bubblor */}
-              <div className="absolute w-15 h-15 bg-black rounded-full bottom-2 right-3 pulsing-bubble"></div>
-              <div className="absolute w-10 h-10 bg-black rounded-full bottom-4 right-4 pulsing-bubble"></div>
-            </Link>
-          </div>
-
-          {/* Projects */}
-          <div className="relative w-full h-full mt-16 p-24">
-            <Link
-              to="/projects"
-              className="w-90 h-90 bg-black rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-10 mt-5 relative"
-              id="project-circle"
-            >
-              <span className="text-white text-xl font-bold">Projects</span>
-              {/* Små bubblor */}
-              <div className="absolute w-11 h-11 bg-black rounded-full bottom-3 left-3 pulsing-bubble"></div>
-              <div className="absolute w-8 h-8 bg-black rounded-full bottom-2 left-2 pulsing-bubble"></div>
-            </Link>
-          </div>
-
-          {/* Contact */}
-          <div className="relative w-full h-full mt-16 p-24">
-            <Link
-              to="/contact"
-              className="w-90 h-90 bg-black rounded-full flex justify-center items-center shadow-lg transform transition-all hover:scale-105 ml-180 mt-5 relative"
-            >
-              <span className="text-white text-xl font-bold">Contact</span>
-              {/* Små bubblor */}
-              <div className="absolute w-10 h-10 bg-black rounded-full top-1 right-1 pulsing-bubble"></div>
-              <div className="absolute w-7 h-7 bg-black rounded-full top-3 right-3 pulsing-bubble"></div>
-              <div className="absolute w-8 h-8 bg-black rounded-full top-4 right-6 pulsing-bubble"></div>
-            </Link>
-          </div>
+          <Circle link="/about" text="About" className="ml-170 mt-20" />
+          <Circle link="/projects" text="Projects" className="ml-10 mt-5" />
+          <Circle link="/contact" text="Contact" className="ml-180 mt-5" />
         </div>
       </section>
     </div>
