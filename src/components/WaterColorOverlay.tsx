@@ -12,7 +12,8 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
   size = "200px",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [cleared, setCleared] = useState(false);
+  const [eraseCount, setEraseCount] = useState(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -32,37 +33,59 @@ const WatercolorOverlay: React.FC<WatercolorOverlayProps> = ({
     ctx.clip();
 
     const colors = [
-      "rgba(255, 223, 100, 0.8)", // Gul
-      "rgba(255, 122, 242, 0.6)", // Rosa
-      "rgba(136, 157, 98, 0.5)", // Grön
+      "rgba(255, 255, 255, 0.8)", // Vit
+      "rgba(211, 211, 211, 0.8)", // Ljusgrå
     ];
 
-    // Ritar flera akvarellfläckar INOM cirkeln
-    for (let i = 0; i < 8; i++) {
+    // Färgtäcke
+    for (let i = 0; i < 30; i++) {
       const x = Math.random() * sizeInt;
       const y = Math.random() * sizeInt;
-      const radius = Math.random() * 50 + 30;
+      const radius = Math.random() * 60 + 40;
       const color = colors[Math.floor(Math.random() * colors.length)];
-
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
       ctx.fillStyle = color;
-      ctx.filter = "blur(15px)"; // Suddar ut för akvarell-effekt
+      ctx.filter = "blur(20px)";
       ctx.fill();
     }
+
+    const erasePaint = (x: number, y: number) => {
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.beginPath();
+      ctx.arc(x, y, 40, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalCompositeOperation = "source-over";
+      setEraseCount((prev) => prev + 1);
+    };
+
+    const handleMouseMove = (event: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      erasePaint(event.clientX - rect.left, event.clientY - rect.top);
+    };
+
+    canvas.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      canvas.removeEventListener("mousemove", handleMouseMove);
+    };
   }, [size]);
+
+  useEffect(() => {
+    if (eraseCount > 200) {
+      setCleared(true);
+    }
+  }, [eraseCount]);
 
   return (
     <div
       className={`relative ${className}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       style={{ width: size, height: size }}
     >
       <canvas
         ref={canvasRef}
-        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out ${
-          isHovered ? "opacity-0" : "opacity-100"
+        className={`absolute top-0 left-0 w-full h-full rounded-full transition-opacity duration-500 ${
+          cleared ? "opacity-0" : "opacity-100"
         }`}
       />
       <img
