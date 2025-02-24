@@ -25,9 +25,19 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-300 dark:bg-gray-600 text-black dark:text-white"
+      className={`w-12 h-12 rounded-full p-2 flex items-center justify-center transition-all duration-300 transform ml-45 mt-10
+        ${theme === "light" ? "bg-black" : "bg-[#F4E1C4]"} 
+        shadow-lg hover:shadow-2xl 
+        focus:outline-none hover:scale-105 cursor-pointer`}
+      style={{
+        transform: theme === "light" ? "translateX(0)" : "translateX(16px)", // Flyttar cirkeln
+      }}
     >
-      {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      <span
+        className={`w-6 h-6 rounded-full ${
+          theme === "light" ? "bg-[#F4D03F]" : "bg-gray-800"
+        }`}
+      />
     </button>
   );
 };

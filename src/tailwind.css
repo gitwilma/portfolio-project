@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 body.dark {
-  background-color: #000000 !important;
+  background-color: #1C0F13 !important;
 }
 
 /* Mörkt tema för navbar */
 body.dark nav {
-  background-color: black !important;
-  color: white !important;
+  background-color: #1C0F13 !important;
+  color: #F4E1C4 !important;
 }
 
 body.dark .dark-text {
-  color: white !important;
+  color: #F4E1C4 !important;
 }
 
 body.dark .circle {
-  background-color: white !important;
+  background-color: #F4E1C4 !important;
   color: black !important;
 }
 
@@ -24,11 +24,11 @@ body.dark .circle span {
 }
 
 body.dark .pulsing-bubble {
-  background-color: white !important;
+  background-color: #F4E1C4 !important;
 }
 
 body.dark footer {
-  background-color: white !important;
+  background-color: #F4E1C4 !important;
 }
 
 body.dark footer p,

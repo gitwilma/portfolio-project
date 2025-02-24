@@ -5,7 +5,12 @@ export default function Home() {
   return (
     <div className="relative py-8">
       {/* S-formad text */}
-      <svg width="100%" height="500" viewBox="0 0 1000 500">
+      <svg
+        width="100%"
+        height="500"
+        viewBox="0 0 1000 500"
+        style={{ transform: "translateY(-50px)" }}
+      >
         <path
           id="s-curve"
           d="M 100,250 
@@ -26,7 +31,7 @@ export default function Home() {
         </text>
       </svg>
 
-      <div className="absolute top-[260px] left-[250px]">
+      <div className="absolute top-[200px] left-[250px]">
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
