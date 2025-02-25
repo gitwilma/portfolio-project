@@ -20,8 +20,11 @@ export default function Contact() {
 
   return (
     <div className="relative">
+      <p className="absolute bottom-[300px] left-1/4 transform -translate-x-1/2 text-9xl font-[NewYork] text-black">
+        Here
+      </p>
       <div className="absolute bottom-[-130px] left-1/3 transform -translate-x-2/3 w-[40%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md">
-        <h3 className="text-xl font-bold font-serif text-[#F4E1C4]">
+        <h3 className="text-xl font-semibold font-serif text-[#F4E1C4]">
           Contact Information
         </h3>
         <p className="text-sm text-center font-serif text-[#F4E1C4]">
