@@ -7,8 +7,10 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <header />
-      <ThemeSwitcher />
+      <div className="absolute top-4 right-8 z-30">
+        <ThemeSwitcher />
+      </div>
+
       <main className="flex-grow container mx-auto px-4">
         <Outlet />
       </main>
