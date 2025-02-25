@@ -8,12 +8,17 @@ export default function Projects() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
+      <h2 className="text-4xl font-bold text-center mb-10 font-serif">
+        Projects
+      </h2>
 
       <div className="flex justify-center gap-6">
         {projects.map((project) => (
           <div key={project.id} className="w-1/4 group">
-            <a href="#" className="block overflow-hidden rounded-lg shadow-md">
+            <a
+              href="#"
+              className="block overflow-hidden rounded-full shadow-md"
+            >
               <img
                 src={project.image}
                 alt={project.title}

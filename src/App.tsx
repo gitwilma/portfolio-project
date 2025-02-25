@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="absolute top-4 right-8 z-30">
+      <div className="absolute top-4 right-4 z-30">
         <ThemeSwitcher />
       </div>
 
