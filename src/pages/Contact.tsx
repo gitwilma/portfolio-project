@@ -19,98 +19,87 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[90vh] p-6 mt-[-50px]">
-      <div className="flex items-center justify-between w-full max-w-7xl">
-        <div className="w-[55%] flex justify-center">
-          {" "}
-          <svg width="100%" height="700" viewBox="0 0 700 700">
-            <path
-              id="c-curve"
-              d="M 600,50 
-             C 50,50 50,650 600,650"
-              fill="transparent"
-              stroke="black"
-              strokeWidth="1"
+    <div className="relative">
+      <div className="absolute bottom-[-130px] left-1/3 transform -translate-x-2/3 w-[40%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md">
+        <h3 className="text-xl font-bold font-serif text-[#F4E1C4]">
+          Contact Information
+        </h3>
+        <p className="text-sm text-center font-serif text-[#F4E1C4]">
+          📧 wilma.haakansson@gmail.com <br />
+          📞 +46 72 701 2121 <br />
+          📍 Gothenburg, Sweden
+        </p>
+      </div>
+
+      {/* Kontaktformulär */}
+      <div className="w-[35%] ml-auto mt-10">
+        <form onSubmit={handleSubmit} className="space-y-4 w-[400px]">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-lg font-semibold mb-2 font-serif"
+            >
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif"
+              placeholder="Enter your name"
             />
-            <text fontSize="60" fill="black">
-              <textPath href="#c-curve" startOffset="100%" textAnchor="end">
-                GET IN TOUCH
-              </textPath>
-            </text>
-          </svg>
-        </div>
+          </div>
 
-        {/* Kontaktformulär */}
-        <div className="w-[35%] transform translate-x-[-80px]">
-          {" "}
-          <form onSubmit={handleSubmit} className="space-y-4 w-[300px]">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-lg font-semibold mb-2"
-              >
-                Your Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
-                placeholder="Enter your name"
-              />
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-lg font-semibold mb-2 font-serif"
+            >
+              Your Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-lg font-semibold mb-2 font-serif"
+            >
+              Your Message
+            </label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif"
+              rows={4}
+              placeholder="How can I help you?"
+            />
+          </div>
+
+          {formStatus && (
+            <div className="text-right text-lg font-semibold">
+              <p>{formStatus}</p>
             </div>
+          )}
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-lg font-semibold mb-2"
-              >
-                Your Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
-                placeholder="Enter your email"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-lg font-semibold mb-2"
-              >
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
-                rows={4}
-                placeholder="How can I help you?"
-              />
-            </div>
-
-            {formStatus && (
-              <div className="text-right text-lg font-semibold">
-                <p>{formStatus}</p>
-              </div>
-            )}
-
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="px-8 py-4 bg-pink-400 text-white rounded-full hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="px-8 py-4 bg-pink-400 text-white rounded-full hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
+            >
+              Send
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
