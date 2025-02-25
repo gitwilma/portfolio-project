@@ -5,7 +5,7 @@ const ConnectingLines = () => {
       <svg className="absolute w-full h-full top-0 left-0">
         <path
           d={`
-              M 400,560 
+              M 400,500 
               C 500,800 700,700 860,800
             `}
           stroke="gray"
