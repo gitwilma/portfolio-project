@@ -4,7 +4,6 @@ body.dark, body.dark * {
   color: #F4E1C4 !important; 
 }
 
-
 body.dark {
   background-color: #1C0F13 !important;
 }
@@ -82,6 +81,19 @@ body.dark p {
 
 .dark svg path {
   stroke: #f4e1c4;
+}
+
+/* Project page */
+body.dark .circle {
+  box-shadow: 0 0 15px rgba(244, 161, 97, 0.7) !important;
+}
+
+body.dark .project-link {
+  box-shadow: 0 0 15px rgba(244, 161, 97, 0.7) !important;
+}
+
+body.dark .project-link:hover {
+  box-shadow: 0 0 20px rgba(244, 161, 97, 0.7) !important;
 }
 
 

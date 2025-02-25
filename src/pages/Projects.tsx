@@ -42,7 +42,7 @@ export default function Projects() {
             key={project.id}
             className="w-1/4 group flex flex-col items-center"
           >
-            {/* Text-sektion ovanför bilden */}
+            {/* Text över projekt-cirkel */}
             <div className="mb-4 text-center">
               <h3 className="text-xl font-semibold font-serif">
                 {project.title}
@@ -52,10 +52,10 @@ export default function Projects() {
               </p>
             </div>
 
-            {/* Cirkeln med bilden */}
+            {/* Projekt-cirkel */}
             <a
               href="#"
-              className="block overflow-hidden rounded-full shadow-md"
+              className="block overflow-hidden rounded-full shadow-md project-link transition-all duration-300"
             >
               <img
                 src={project.image}
