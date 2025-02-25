@@ -7,15 +7,12 @@ const ThemeSwitcher = () => {
 
   useEffect(() => {
     if (theme === "dark") {
-      document.documentElement.classList.add("dark");
       document.body.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
       document.body.classList.remove("dark");
     }
 
     localStorage.setItem("theme", theme);
-    console.log("Current body classes:", document.body.classList);
   }, [theme]);
 
   const toggleTheme = () => {
@@ -25,20 +22,36 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`w-12 h-12 rounded-full p-2 flex items-center justify-center transition-all duration-300 transform ml-45 mt-10
-    ${
-      theme === "light"
-        ? "bg-black shadow-[0_0_15px_rgba(255,215,0,0.8)]"
-        : "bg-[#F4E1C4] shadow-[0_0_15px_rgba(244,161,97,0.8)]"
-    } 
-    hover:shadow-2xl focus:outline-none hover:scale-105 cursor-pointer`}
-      style={{
-        transform: theme === "light" ? "translateX(0)" : "translateX(16px)",
-      }}
+      className={`w-16 h-8 rounded-full p-1 flex items-center justify-between relative transition-all duration-300 shadow-md hover:scale-105
+        ${
+          theme === "light"
+            ? "bg-gray-200"
+            : "bg-[#F4E1C4] shadow-[0_0_15px_rgba(244,161,97,0.8)]"
+        }
+      `}
     >
+      {/* Sol-symbolen */}
       <span
-        className={`w-6 h-6 rounded-full ${
-          theme === "light" ? "bg-[#F4D03F]" : "bg-gray-800"
+        className={`text-xl transition-all duration-300 ${
+          theme === "light" ? "text-yellow-500" : "text-gray-600"
+        }`}
+      >
+        ☀️
+      </span>
+
+      {/* Måne-symbolen */}
+      <span
+        className={`text-xl transition-all duration-300 ${
+          theme === "dark" ? "text-indigo-900" : "text-gray-300"
+        }`}
+      >
+        🌙
+      </span>
+
+      {/* Växlingsknapp */}
+      <div
+        className={`w-6 h-6 bg-white rounded-full shadow-md absolute transition-all duration-300 ${
+          theme === "dark" ? "translate-x-8" : "translate-x-0"
         }`}
       />
     </button>
