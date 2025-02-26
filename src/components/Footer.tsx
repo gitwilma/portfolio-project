@@ -32,10 +32,12 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-[#F4E1C4] text-sm text-center">
+          <p className="text-[#F4E1C4] text-sm text-center font-[Poppins]">
             © {new Date().getFullYear()} Wilma Håkansson. All rights reserved.
           </p>
-          <p className="text-[#F4E1C4] text-sm">Designed & built by me!</p>
+          <p className="text-[#F4E1C4] text-sm font-[Poppins]">
+            Designed & built by me!
+          </p>
         </div>
       </div>
     </footer>
