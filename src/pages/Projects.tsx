@@ -4,28 +4,28 @@ export default function Projects() {
       id: 1,
       title: "My Portfolio",
       description:
-        "A fully responsive portfolio website, designed and built from scratch using React and Tailwind CSS.",
+        "Designed from scratch in Figma and built by myself, this portfolio is developed using React, Vite, Tailwind CSS, and TypeScript. It features smooth navigation with React Router and is fully version-controlled with Git and GitHub.",
       image: "/assets/portfolio-image.png",
       link: "https://github.com/gitwilma/portfolio-project.git",
     },
-    {
-      id: 2,
-      title: "Future Project",
-      description: "More projects will be added here soon!",
-      image: "/images/placeholder.jpg",
-    },
-    {
-      id: 3,
-      title: "Future Project",
-      description: "More projects will be added here soon!",
-      image: "/images/placeholder.jpg",
-    },
-    {
-      id: 4,
-      title: "Future Project",
-      description: "More projects will be added here soon!",
-      image: "/images/placeholder.jpg",
-    },
+    // {
+    //   id: 2,
+    //   title: "Future Project",
+    //   description: "More projects will be added here soon!",
+    //   image: "/images/placeholder.jpg",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Future Project",
+    //   description: "More projects will be added here soon!",
+    //   image: "/images/placeholder.jpg",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Future Project",
+    //   description: "More projects will be added here soon!",
+    //   image: "/images/placeholder.jpg",
+    // },
   ];
 
   return (
@@ -34,8 +34,8 @@ export default function Projects() {
         Projects
       </h2>
 
-      <p className="text-center text-lg text-gray-500 font-[Poppins] mb-10">
-        Here you'll find my latest work. More projects are in progress.
+      <p className="text-center text-lg text-gray-600 font-[Poppins] mb-10">
+        Here you'll find my latest work. More projects are in progress!
       </p>
 
       <div className="flex justify-center gap-6">
@@ -45,7 +45,7 @@ export default function Projects() {
             className="w-1/4 group flex flex-col items-center"
           >
             {/* Text över projekt-cirkel */}
-            <div className="mb-4 text-center">
+            <div className="mb-4 text-start">
               <h3 className="text-xl font-semibold font-[Poppins]">
                 {project.title}
               </h3>
