@@ -19,98 +19,91 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[90vh] p-6 mt-[-50px]">
-      <div className="flex items-center justify-between w-full max-w-7xl">
-        <div className="w-[55%] flex justify-center">
-          {" "}
-          <svg width="100%" height="700" viewBox="0 0 700 700">
-            <path
-              id="c-curve"
-              d="M 600,50 
-             C 50,50 50,650 600,650"
-              fill="transparent"
-              stroke="black"
-              strokeWidth="1"
+    <div className="relative flex flex-col h-[70vh]">
+      {/* Kontaktformulär */}
+      <div className="halfmoon absolute top-[-50px] right-[5%] w-[65%] h-[500px] rounded-b-full flex flex-col items-center justify-center shadow-md overflow-hidden bg-[#000000]">
+        <form onSubmit={handleSubmit} className="space-y-2 w-1/2">
+          <h3 className="text-xl font-semibold font-[Poppins] text-[#D8B17D] text-start">
+            Contact Me
+          </h3>
+
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-md font-semibold mb-2 font-[Poppins] text-[#F4E1C4]"
+            >
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-3 py-2 bg-[#F4E1C4] rounded-md focus:outline-none focus:ring-4 focus:ring-[#D8B17D] font-[Poppins] text-black opacity-80"
+              placeholder="Enter your name"
             />
-            <text fontSize="60" fill="black">
-              <textPath href="#c-curve" startOffset="100%" textAnchor="end">
-                GET IN TOUCH
-              </textPath>
-            </text>
-          </svg>
-        </div>
+          </div>
 
-        {/* Kontaktformulär */}
-        <div className="w-[35%] transform translate-x-[-80px]">
-          {" "}
-          <form onSubmit={handleSubmit} className="space-y-4 w-[300px]">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-lg font-semibold mb-2"
-              >
-                Your Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
-                placeholder="Enter your name"
-              />
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-md font-semibold mb-2 font-[Poppins] text-[#F4E1C4]"
+            >
+              Your Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-3 py-2 bg-[#F4E1C4] rounded-md focus:outline-none focus:ring-4 focus:ring-[#D8B17D] font-[Poppins] text-black opacity-80"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-md font-semibold mb-2 font-[Poppins] text-[#F4E1C4]"
+            >
+              Your Message
+            </label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full px-3 py-2 bg-[#F4E1C4] rounded-md focus:outline-none focus:ring-4 focus:ring-[#D8B17D] font-[Poppins] text-black opacity-80"
+              placeholder="How can I help you?"
+            />
+          </div>
+
+          {formStatus && (
+            <div className="text-right text-lg font-semibold text-[#F4E1C4]">
+              <p>{formStatus}</p>
             </div>
+          )}
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-lg font-semibold mb-2"
-              >
-                Your Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
-                placeholder="Enter your email"
-              />
-            </div>
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="px-8 py-3 bg-pink-400 text-white rounded-full hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-[#D8B17D]"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
 
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-lg font-semibold mb-2"
-              >
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
-                rows={4}
-                placeholder="How can I help you?"
-              />
-            </div>
-
-            {formStatus && (
-              <div className="text-right text-lg font-semibold">
-                <p>{formStatus}</p>
-              </div>
-            )}
-
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="px-8 py-4 bg-pink-400 text-white rounded-full hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
+      {/* Contact Information */}
+      <div className="halfmoon absolute bottom-[-10px] left-[1%] w-[45%] h-[300px] rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+        <h3 className="text-2xl text-start font-bold font-[Poppins] text-[#D8B17D]">
+          Contact Information
+        </h3>
+        <p className="text-lg text-start font-[Poppins] text-[#D8B17D] p-4">
+          📧 wilma.haakansson@gmail.com <br />
+          📞 +46 72 701 2121 <br />
+          📍 Gothenburg, Sweden
+        </p>
       </div>
     </div>
   );

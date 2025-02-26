@@ -49,22 +49,44 @@ body.dark p {
 }
 
 /* Contact page */ 
-
-.dark label {
-  color: #F8D8B0; 
+.halfmoon {
+  background-color: black; 
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.dark input,
-.dark textarea {
+body.dark .halfmoon {
+  background-color: #F4E1C4 !important; 
+  box-shadow: 0 0 15px rgba(244, 161, 97, 0.7) !important; 
+}
+
+body.dark .halfmoon {
+  background-color: #F4E1C4 !important; 
+  box-shadow: none !important;
+}
+
+body.dark .halfmoon h3,
+body.dark .halfmoon p,
+body.dark .halfmoon label {
+  color: black !important; 
+}
+
+body.dark .halfmoon input,
+body.dark .halfmoon textarea {
   background-color: #6B5B4D; 
   border: 1px solid #8D7B68; 
   color: #FCEBD5; 
 }
 
-.dark input::placeholder,
-.dark textarea::placeholder {
+body.dark .halfmoon input::placeholder,
+body.dark .halfmoon textarea::placeholder {
   color: #C5A991; 
 }
+
+body.dark .halfmoon button {
+  background-color: #D99A5C;
+  color: #2D1B0D; 
+}
+
 
 .dark button {
   background-color: #D99A5C;
@@ -94,14 +116,9 @@ body.dark .project-link {
   box-shadow: 0 0 15px rgba(244, 161, 97, 0.7) !important;
 }
 
-body.dark .project-link:hover {
-  box-shadow: 0 0 20px rgba(244, 161, 97, 0.7) !important;
-}
-
-
 @font-face {
-    font-family: "Agoka";
-    src: url("/assets/AgokaFamily.otf") format("truetype"); 
+    font-family: "Poppins";
+    src: url("/assets/Poppins-Light.ttf") format("truetype"); 
     font-weight: normal, bold;
     font-style: normal;
   }
