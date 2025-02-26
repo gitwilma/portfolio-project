@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="px-10 py-10 max-w-2xl font-serif">
+    <div className="px-10 py-10 max-w-2xl font-[Poppins]">
       <h2 className="text-5xl py-5">About me</h2>
       <p>
         Hi! My name is Wilma and I am a frontend developer. With skills in
