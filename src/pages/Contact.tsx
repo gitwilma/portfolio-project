@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative flex flex-col h-[70vh]">
       {/* Kontaktformulär */}
       <div className="absolute top-[-50px] right-[5%] w-[65%] h-[500px] bg-black rounded-b-full flex flex-col items-center justify-center shadow-md overflow-hidden">
         <form onSubmit={handleSubmit} className="space-y-2 w-1/2">
@@ -96,7 +96,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Information */}
-      <div className="absolute bottom-[10px] left-[5%] w-[40%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+      <div className="absolute bottom-[-54px] left-[5%] w-[45%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
         <h3 className="text-xl font-semibold font-serif text-[#F4E1C4]">
           Contact Information
         </h3>
