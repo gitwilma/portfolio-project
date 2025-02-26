@@ -19,28 +19,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative">
-      <p className="absolute bottom-[300px] left-1/4 transform -translate-x-1/2 text-9xl font-[NewYork] text-black">
-        Here
-      </p>
-      <div className="absolute bottom-[-130px] left-1/3 transform -translate-x-2/3 w-[40%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md">
-        <h3 className="text-xl font-semibold font-serif text-[#F4E1C4]">
-          Contact Information
-        </h3>
-        <p className="text-sm text-center font-serif text-[#F4E1C4]">
-          📧 wilma.haakansson@gmail.com <br />
-          📞 +46 72 701 2121 <br />
-          📍 Gothenburg, Sweden
-        </p>
-      </div>
-
+    <div className="relative flex flex-col min-h-screen">
       {/* Kontaktformulär */}
-      <div className="w-[35%] ml-auto mt-10">
-        <form onSubmit={handleSubmit} className="space-y-4 w-[400px]">
+      <div className="absolute top-[-50px] right-[5%] w-[65%] h-[500px] bg-black rounded-b-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+        <form onSubmit={handleSubmit} className="space-y-2 w-1/2">
+          <h3 className="text-lg font-semibold font-serif text-[#F4E1C4] text-start">
+            Contact Me
+          </h3>
+
           <div>
             <label
               htmlFor="name"
-              className="block text-lg font-semibold mb-2 font-serif"
+              className="block text-md font-semibold mb-2 font-serif text-[#F4E1C4]"
             >
               Your Name
             </label>
@@ -49,7 +39,7 @@ export default function Contact() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif text-[#F4E1C4]"
               placeholder="Enter your name"
             />
           </div>
@@ -57,7 +47,7 @@ export default function Contact() {
           <div>
             <label
               htmlFor="email"
-              className="block text-lg font-semibold mb-2 font-serif"
+              className="block text-md font-semibold mb-2 font-serif text-[#F4E1C4]"
             >
               Your Email
             </label>
@@ -66,7 +56,7 @@ export default function Contact() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif text-[#F4E1C4]"
               placeholder="Enter your email"
             />
           </div>
@@ -74,7 +64,7 @@ export default function Contact() {
           <div>
             <label
               htmlFor="message"
-              className="block text-lg font-semibold mb-2 font-serif"
+              className="block text-md font-semibold mb-2 font-serif text-[#F4E1C4]"
             >
               Your Message
             </label>
@@ -82,14 +72,14 @@ export default function Contact() {
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif"
-              rows={4}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif text-[#F4E1C4]"
+              rows={2}
               placeholder="How can I help you?"
             />
           </div>
 
           {formStatus && (
-            <div className="text-right text-lg font-semibold">
+            <div className="text-right text-lg font-semibold text-[#F4E1C4]">
               <p>{formStatus}</p>
             </div>
           )}
@@ -97,12 +87,24 @@ export default function Contact() {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="px-8 py-4 bg-pink-400 text-white rounded-full hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
+              className="px-8 py-3 bg-pink-400 text-white rounded-full hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
             >
               Send
             </button>
           </div>
         </form>
+      </div>
+
+      {/* Contact Information */}
+      <div className="absolute bottom-[10px] left-[5%] w-[40%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+        <h3 className="text-xl font-semibold font-serif text-[#F4E1C4]">
+          Contact Information
+        </h3>
+        <p className="text-sm text-center font-serif text-[#F4E1C4]">
+          📧 wilma.haakansson@gmail.com <br />
+          📞 +46 72 701 2121 <br />
+          📍 Gothenburg, Sweden
+        </p>
       </div>
     </div>
   );
