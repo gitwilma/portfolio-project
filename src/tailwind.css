@@ -117,8 +117,8 @@ body.dark .project-link {
 }
 
 @font-face {
-    font-family: "Agoka";
-    src: url("/assets/AgokaFamily.otf") format("truetype"); 
+    font-family: "Poppins";
+    src: url("/assets/Poppins-Light.ttf") format("truetype"); 
     font-weight: normal, bold;
     font-style: normal;
   }
