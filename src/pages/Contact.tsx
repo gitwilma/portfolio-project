@@ -95,7 +95,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Information */}
-      <div className="halfmoon absolute bottom-[-54px] left-[1%] w-[45%] h-[300px] rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+      <div className="halfmoon absolute bottom-[-10px] left-[1%] w-[45%] h-[300px] rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
         <h3 className="text-2xl text-start font-bold font-[Poppins] text-[#D8B17D]">
           Contact Information
         </h3>

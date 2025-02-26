@@ -6,7 +6,8 @@ export default function Footer() {
           <p className="font-[Kiona-Regular] text-[#F4E1C4] text-xl mb-4">
             Wilma Håkansson
           </p>
-          <div className="flex space-x-8">
+
+          <div className="flex space-x-8 mb-4">
             <a
               href="https://github.com/gitwilma"
               target="_blank"
@@ -23,7 +24,18 @@ export default function Footer() {
             >
               LinkedIn
             </a>
+            <a
+              href="/contact"
+              className="font-[Kiona-Regular] text-[#F4E1C4] hover:text-gray-600"
+            >
+              Let's connect
+            </a>
           </div>
+
+          <p className="text-[#F4E1C4] text-sm text-center">
+            © {new Date().getFullYear()} Wilma Håkansson. All rights reserved.
+          </p>
+          <p className="text-[#F4E1C4] text-sm">Designed & built by me!</p>
         </div>
       </div>
     </footer>
