@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <div className="relative flex flex-col h-[70vh]">
       {/* Kontaktformulär */}
-      <div className="absolute top-[-50px] right-[5%] w-[65%] h-[500px] bg-black rounded-b-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+      <div className="halfmoon absolute top-[-50px] right-[5%] w-[65%] h-[500px] rounded-b-full flex flex-col items-center justify-center shadow-md overflow-hidden">
         <form onSubmit={handleSubmit} className="space-y-2 w-1/2">
           <h3 className="text-lg font-semibold font-serif text-[#F4E1C4] text-start">
             Contact Me
@@ -39,7 +39,7 @@ export default function Contact() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif text-[#F4E1C4]"
+              className="w-full px-3 py-2 border border-b-amber-100 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 font-serif text-[#F4E1C4]"
               placeholder="Enter your name"
             />
           </div>
@@ -96,7 +96,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Information */}
-      <div className="absolute bottom-[-54px] left-[5%] w-[45%] h-[300px] bg-black rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
+      <div className="halfmoon absolute bottom-[-54px] left-[1%] w-[45%] h-[300px] rounded-t-full flex flex-col items-center justify-center shadow-md overflow-hidden">
         <h3 className="text-xl font-semibold font-serif text-[#F4E1C4]">
           Contact Information
         </h3>
