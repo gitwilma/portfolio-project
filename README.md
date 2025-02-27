@@ -15,10 +15,9 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 
 ## Features
 
-- **Responsive Design** – Optimized for all devices
-- **Dark Mode** – Toggle between light and dark themes
 - **Smooth Navigation** – Powered by React Router
-- **Interactive UI** – Elegant animations and transitions
+- **Dark Mode** – Toggle between light and dark themes
+- **Interactive UI** – Animations and transitions
 - **Project Showcase** – Display of my latest work with images and descriptions
 - **Contact Form** – Reach out to me directly via a built-in form
 
