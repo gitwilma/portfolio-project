@@ -1,3 +1,12 @@
+# Krav för godkänt:
+
+[x]Projektet innehåller och använder minst 6 stycken komponenter varav minst 2 stycken är “statefulla"-komponenter.
+[x]React Router har använts för att dynamiskt uppdatera URL’en.
+[x]Git & GitHub har använts.
+[x]Projektmappen innehåller en README.md fil
+[x]Uppgiften lämnas in i tid!
+[x]Muntlig presentation är genomförd
+
 # Wilma's Portfolio
 
 Check out the live demo of my portfolio here: (https://portfolio-project-nine-tan.vercel.app/)
