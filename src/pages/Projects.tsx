@@ -12,19 +12,19 @@ export default function Projects() {
     //   id: 2,
     //   title: "Future Project",
     //   description: "More projects will be added here soon!",
-    //   image: "/images/placeholder.jpg",
+    //   image: "",
     // },
     // {
     //   id: 3,
     //   title: "Future Project",
     //   description: "More projects will be added here soon!",
-    //   image: "/images/placeholder.jpg",
+    //   image: "",
     // },
     // {
     //   id: 4,
     //   title: "Future Project",
     //   description: "More projects will be added here soon!",
-    //   image: "/images/placeholder.jpg",
+    //   image: "",
     // },
   ];
 
