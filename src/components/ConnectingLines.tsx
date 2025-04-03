@@ -1,39 +1,30 @@
 const ConnectingLines = () => {
   return (
     <>
-      {/* Connecting lines Bild-About */}
+      {/* Connecting line: CV-bild → About (oförändrad) */}
       <svg className="absolute w-full h-full top-0 left-0">
         <path
-          d={`
-              M 400,500 
-              C 500,800 700,700 860,800
-            `}
+          d="M 400,500 C 500,800 700,700 860,800"
           stroke="gray"
           strokeWidth="1"
           fill="transparent"
         />
       </svg>
 
-      {/* Connecting lines About-Projects */}
+      {/* Connecting line: About → Projects */}
       <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
         <path
-          d={`
-              M 860,1100
-              C 800,1400 250,1450 490,1600
-            `}
+          d="M 920,950 C 700,1100 200,1150 480,1300"
           stroke="gray"
           strokeWidth="1"
           fill="transparent"
         />
       </svg>
 
-      {/* Connecting lines Projects-Contact */}
+      {/* Connecting line: Projects → Contact */}
       <svg className="absolute w-full h-full top-0 left-0 pointer-events-none">
         <path
-          d={`
-              M 490,1600
-              C 700,1650 650,1950 900,2100
-            `}
+          d="M 480,1300 C 700,1350 650,1650 900,1650"
           stroke="gray"
           strokeWidth="1"
           fill="transparent"

@@ -62,7 +62,7 @@ export default function Home() {
           <Circle
             link="/projects"
             text="Projects"
-            className="lg:ml-10 mt-4 lg:mt-1"
+            className="lg:ml-[-600px] mt-4 lg:mt-1"
           />
           <Circle
             link="/contact"
