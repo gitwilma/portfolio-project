@@ -31,22 +31,26 @@ export default function Home() {
         </text>
       </svg>
 
-      <div className="absolute top-[200px] left-[250px]">
+      {/* CV-bild – centrerad i mobil */}
+      <div className="absolute top-[200px] left-1/2 transform -translate-x-1/2 sm:left-[250px] sm:translate-x-0">
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
-          className="rounded-full w-[300px] h-[300px]"
+          className="rounded-full w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]"
         />
       </div>
 
-      {/* Connecting Lines */}
-      <ConnectingLines />
+      {/* Connecting Lines – syns ej i mobil */}
+      <div className="hidden sm:block">
+        <ConnectingLines />
+      </div>
 
+      {/* Cirklar – vertikalt i mobil */}
       <section>
-        <div className="cursor-pointer flex flex-col items-end">
-          <Circle link="/about" text="About" className="ml-170 mt-20" />
-          <Circle link="/projects" text="Projects" className="ml-10 mt-5" />
-          <Circle link="/contact" text="Contact" className="ml-180 mt-5" />
+        <div className="cursor-pointer flex flex-col items-center sm:items-end">
+          <Circle link="/about" text="About" className="mt-10 sm:ml-170" />
+          <Circle link="/projects" text="Projects" className="mt-5 sm:ml-10" />
+          <Circle link="/contact" text="Contact" className="mt-5 sm:ml-180" />
         </div>
       </section>
     </div>

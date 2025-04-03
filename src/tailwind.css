@@ -164,4 +164,31 @@ body.dark .project-link {
   .pulsing-bubble:nth-child(3) {
     animation-delay: 0.4s;
   }
-  
+
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* Anpassningar för mobilvy */
+@media (max-width: 768px) {
+
+  .pulsing-bubble {
+    width: 8px;
+    height: 8px;
+  }
+
+  .connecting-lines {
+    display: none; /* Dölj linjer i mobilvy */
+  }
+
+  .home-text {
+    font-size: 24px;
+  }
+
+  .halfmoon {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+}
+
