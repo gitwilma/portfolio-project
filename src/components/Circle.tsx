@@ -8,10 +8,10 @@ interface CircleProps {
 
 const Circle = ({ link, text, className = "" }: CircleProps) => {
   return (
-    <div className="w-full h-screen flex justify-center items-center snap-start">
+    <div className="w-full sm:h-auto flex justify-center items-center">
       <Link
         to={link}
-        className={`circle w-[90vmin] h-[90vmin] sm:w-96 sm:h-96 bg-black rounded-full flex justify-center items-center shadow-lg transition-all hover:scale-105 relative ${className}`}
+        className={`circle w-[90vmin] aspect-square sm:w-96 sm:h-96 bg-black rounded-full flex justify-center items-center shadow-lg transition-all hover:scale-105 relative ${className}`}
       >
         <span className="text-white text-3xl sm:text-xl font-bold">{text}</span>
 

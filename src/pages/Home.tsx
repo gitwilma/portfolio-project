@@ -4,9 +4,9 @@ import ConnectingLines from "../components/ConnectingLines";
 export default function Home() {
   return (
     <div className="relative py-8">
-      {/* S-formad text – endast desktop */}
+      {/* S-formad text – endast lg och upp */}
       <svg
-        className="hidden sm:block"
+        className="hidden lg:block"
         width="100%"
         height="500"
         viewBox="0 0 1000 500"
@@ -32,31 +32,43 @@ export default function Home() {
         </text>
       </svg>
 
-      {/* CV-bild och text under – mobilvänlig & desktopvänlig */}
-      <div className="relative sm:absolute sm:top-[200px] sm:left-[250px] sm:translate-x-0 flex flex-col items-center">
+      {/* CV-bild – centrerad i mobil + md, vänster i lg */}
+      <div className="relative lg:absolute lg:top-[200px] lg:left-1/2 lg:-translate-x-[120%] left-1/2 -translate-x-1/2 flex flex-col items-center">
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
-          className="rounded-full w-[90vmin] aspect-square sm:w-[300px] sm:h-[300px] sm:aspect-auto object-cover"
+          className="rounded-full w-[90vmin] aspect-square md:w-[300px] md:h-[300px] lg:w-[300px] lg:h-[300px] sm:aspect-auto object-cover"
         />
 
         {/* Text under bilden – endast mobil */}
-        <p className="block sm:hidden text-center text-2xl font-[NewYork] mt-6 dark-text">
+        <p className="block lg:hidden text-center text-2xl font-[NewYork] mt-1 dark-text">
           Welcome to my portfolio!
         </p>
       </div>
 
-      {/* Connecting Lines – syns ej i mobil */}
-      <div className="hidden sm:block">
+      {/* Connecting Lines – endast desktop */}
+      <div className="hidden lg:block">
         <ConnectingLines />
       </div>
 
-      {/* Cirklar – vertikalt i mobil */}
+      {/* Cirklar */}
       <section>
-        <div className="cursor-pointer flex flex-col items-center sm:items-end">
-          <Circle link="/about" text="About" className="mt-10 sm:ml-170" />
-          <Circle link="/projects" text="Projects" className="mt-5 sm:ml-10" />
-          <Circle link="/contact" text="Contact" className="mt-5 sm:ml-180" />
+        <div className="cursor-pointer flex flex-col items-center lg:items-end">
+          <Circle
+            link="/about"
+            text="About"
+            className="lg:ml-170 lg:mt-10 mt-0"
+          />
+          <Circle
+            link="/projects"
+            text="Projects"
+            className="lg:ml-10 mt-4 lg:mt-1"
+          />
+          <Circle
+            link="/contact"
+            text="Contact"
+            className="lg:ml-180 mt-4 lg:mt-1"
+          />
         </div>
       </section>
     </div>
