@@ -31,12 +31,12 @@ export default function Home() {
         </text>
       </svg>
 
-      {/* CV-bild – centrerad i mobil */}
+      {/* CV-bild – centrerad i mobil, vänster i desktop */}
       <div className="absolute top-[200px] left-1/2 transform -translate-x-1/2 sm:left-[250px] sm:translate-x-0">
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
-          className="w-[90vmin] aspect-square rounded-full object-cover"
+          className="rounded-full w-[90vmin] aspect-square sm:w-[300px] sm:h-[300px] sm:aspect-auto object-cover"
         />
       </div>
 
