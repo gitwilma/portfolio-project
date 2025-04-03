@@ -42,7 +42,7 @@ export default function Home() {
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
-          className="rounded-full w-[90vmin] aspect-square md:w-[300px] md:h-[300px] lg:w-[300px] lg:h-[300px] sm:aspect-auto object-cover"
+          className="rounded-full w-full max-w-[260px] aspect-square md:max-w-[300px] md:w-[300px] md:h-[300px] object-cover"
         />
 
         {/* Text under bilden – endast mobil */}
