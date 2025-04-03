@@ -36,7 +36,7 @@ export default function Home() {
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
-          className="rounded-full w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]"
+          className="w-[90vmin] aspect-square rounded-full object-cover"
         />
       </div>
 
