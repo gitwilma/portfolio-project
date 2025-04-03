@@ -4,8 +4,9 @@ import ConnectingLines from "../components/ConnectingLines";
 export default function Home() {
   return (
     <div className="relative py-8">
-      {/* S-formad text */}
+      {/* S-formad text – endast desktop */}
       <svg
+        className="hidden sm:block"
         width="100%"
         height="500"
         viewBox="0 0 1000 500"
@@ -31,13 +32,18 @@ export default function Home() {
         </text>
       </svg>
 
-      {/* CV-bild – centrerad i mobil, vänster i desktop */}
-      <div className="absolute top-[200px] left-1/2 transform -translate-x-1/2 sm:left-[250px] sm:translate-x-0">
+      {/* CV-bild och text under – mobilvänlig & desktopvänlig */}
+      <div className="relative sm:absolute sm:top-[200px] sm:left-[250px] sm:translate-x-0 flex flex-col items-center">
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
           className="rounded-full w-[90vmin] aspect-square sm:w-[300px] sm:h-[300px] sm:aspect-auto object-cover"
         />
+
+        {/* Text under bilden – endast mobil */}
+        <p className="block sm:hidden text-center text-2xl font-[NewYork] mt-6 dark-text">
+          Welcome to my portfolio!
+        </p>
       </div>
 
       {/* Connecting Lines – syns ej i mobil */}
