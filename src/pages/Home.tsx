@@ -26,7 +26,12 @@ export default function Home() {
           fontFamily="NewYork"
           className="dark-text"
         >
-          <textPath href="#s-curve" startOffset="1%" textAnchor="start">
+          <textPath
+            href="#s-curve"
+            startOffset="1%"
+            textAnchor="start"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             Welcome to my portfolio!
           </textPath>
         </text>
