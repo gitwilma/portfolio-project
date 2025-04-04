@@ -10,9 +10,10 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <HamburgerMenu />
           </div>
-
-          {/* Namnet "Wilma Håkansson" */}
-          <Link to="/" className="text-2xl font-bolder flex-grow text-center">
+          <Link
+            to="/"
+            className="text-2xl font-bolder flex-grow text-center lg:text-left"
+          >
             Wilma Håkansson
           </Link>
 
