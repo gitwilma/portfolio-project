@@ -192,3 +192,80 @@ body.dark .project-link {
   }
 }
 
+/* Mobile responsiveness */
+@media (max-width: 360px) {
+  body {
+    font-size: 12px; /* Small font size for mobile */
+  }
+
+  .halfmoon {
+    width: 100%; /* Full width on small screens */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .home-text {
+    font-size: 18px; /* Smaller font size on smaller screens */
+  }
+
+  /* Adjust image in smaller screens */
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjusting layout for tablets and smaller screens */
+  .halfmoon {
+    width: 90%; /* 90% width for tablets */
+    height: auto;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .home-text {
+    font-size: 24px;
+  }
+
+  .pulsing-bubble {
+    width: 8px;
+    height: 8px;
+  }
+
+  .connecting-lines {
+    display: none; /* Hide lines on mobile */
+  }
+
+  /* Adjust image for smaller screens */
+  .about-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+/* Mobilrespons */
+@media (max-width: 768px) {
+  /* Bilden går under texten på mobil */
+  .about-image {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px; /* Lite utrymme mellan text och bild */
+  }
+}
+
+@media (min-width: 768px) {
+  /* För tablets och större skärmar, bildens storlek hålls konstant */
+  .about-image {
+    width: 400px;
+    height: 400px;
+  }
+}
+/* För mellan 1010px och 750px */
+@media (max-width: 1010px) and (min-width: 750px) {
+  .about-image {
+    width: 300px; /* Justera för mellanstora skärmar */
+    height: 300px;
+    object-fit: cover; /* Bevara bildens proportioner */
+  }
+}
+
+
