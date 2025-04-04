@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,11 +32,8 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* ThemeSwitcher och Hamburgarmenyn i mobil */}
-          <div className="lg:hidden absolute top-4 right-4 z-30 flex items-center space-x-4">
-            <ThemeSwitcher />
-
-            {/* Hamburger menyikon */}
+          {/* Hamburger menyikon */}
+          <div className="lg:hidden flex items-center">
             <button
               onClick={toggleMenu}
               className="text-2xl text-black focus:outline-none"
