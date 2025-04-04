@@ -2,7 +2,6 @@ export default function About() {
   return (
     <div className="px-10 py-10 max-w-6xl font-[Poppins] mx-auto">
       <div className="flex flex-col md:flex-row md:items-center">
-        {/* Texten tar upp halva sidan på större skärmar */}
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h2 className="text-5xl py-5">About me</h2>
           <p className="text-lg md:text-xl">
@@ -20,7 +19,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Bilden ligger bredvid texten i desktop-läge */}
         <div className="md:w-1/2 flex justify-center">
           <img
             src="/assets/cv-image.png"

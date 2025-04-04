@@ -7,7 +7,9 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
-      <div className="absolute top-4 right-4 z-30 flex items-center space-x-4">
+
+      {/* ThemeSwitcher med fast position */}
+      <div className="fixed top-4 right-4 z-30 flex items-center space-x-4">
         <ThemeSwitcher />
       </div>
 

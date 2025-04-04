@@ -6,7 +6,7 @@ const ConnectingLines = () => {
       height="2000"
       viewBox="0 0 1000 2000"
     >
-      {/* CV-bild → About (orörd) */}
+      {/* CV-bild → About */}
       <path
         d="M 300,500 C 500,800 700,700 860,800"
         stroke="gray"
