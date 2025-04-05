@@ -49,44 +49,39 @@ body.dark p {
 }
 
 /* Contact page */ 
-.halfmoon {
-  background-color: black; 
-  transition: background-color 0.3s, box-shadow 0.3s;
+.contact-circle {
+  background-color: #000000; 
+  transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
-body.dark .halfmoon {
+body.dark .contact-circle {
   background-color: #F4E1C4 !important; 
   box-shadow: 0 0 15px rgba(244, 161, 97, 0.7) !important; 
 }
 
-body.dark .halfmoon {
-  background-color: #F4E1C4 !important; 
-  box-shadow: none !important;
-}
-
-body.dark .halfmoon h3,
-body.dark .halfmoon p,
-body.dark .halfmoon label {
+body.dark .contact-circle label,
+body.dark .contact-circle h3,
+body.dark .contact-circle p {
   color: black !important; 
 }
 
-body.dark .halfmoon input,
-body.dark .halfmoon textarea {
+body.dark .contact-circle input,
+body.dark .contact-circle textarea {
   background-color: #6B5B4D; 
   border: 1px solid #8D7B68; 
   color: #FCEBD5; 
 }
 
-body.dark .halfmoon input::placeholder,
-body.dark .halfmoon textarea::placeholder {
+body.dark .contact-circle input::placeholder,
+body.dark .contact-circle textarea::placeholder {
   color: #C5A991; 
 }
 
-body.dark .halfmoon button {
+body.dark .contact-circle button {
   background-color: #D99A5C;
   color: #2D1B0D; 
 }
-
 
 .dark button {
   background-color: #D99A5C;
@@ -184,7 +179,7 @@ body.dark .project-link {
     font-size: 24px;
   }
 
-  .halfmoon {
+  .form-circle .contact-circle {
     width: 90%;
     height: auto;
     border-radius: 20px;
@@ -195,19 +190,18 @@ body.dark .project-link {
 /* Mobile responsiveness */
 @media (max-width: 360px) {
   body {
-    font-size: 12px; /* Small font size for mobile */
+    font-size: 12px; 
   }
 
-  .halfmoon {
-    width: 100%; /* Full width on small screens */
-    padding: 10px; /* Adjust padding */
+  .form-circle .contact-circle {
+    width: 100%; 
+    padding: 10px; 
   }
 
   .home-text {
-    font-size: 18px; /* Smaller font size on smaller screens */
+    font-size: 18px; 
   }
 
-  /* Adjust image in smaller screens */
   .about-image {
     width: 200px;
     height: 200px;
@@ -215,9 +209,8 @@ body.dark .project-link {
 }
 
 @media (max-width: 768px) {
-  /* Adjusting layout for tablets and smaller screens */
-  .halfmoon {
-    width: 90%; /* 90% width for tablets */
+  .form-circle .contact-circle {
+    width: 90%; 
     height: auto;
     border-radius: 20px;
     padding: 15px;
@@ -233,10 +226,9 @@ body.dark .project-link {
   }
 
   .connecting-lines {
-    display: none; /* Hide lines on mobile */
+    display: none; 
   }
 
-  /* Adjust image for smaller screens */
   .about-image {
     width: 300px;
     height: 300px;
@@ -244,27 +236,24 @@ body.dark .project-link {
 }
 /* Mobilrespons */
 @media (max-width: 768px) {
-  /* Bilden går under texten på mobil */
   .about-image {
     width: 250px;
     height: 250px;
-    margin-top: 20px; /* Lite utrymme mellan text och bild */
+    margin-top: 20px; 
   }
 }
 
 @media (min-width: 768px) {
-  /* För tablets och större skärmar, bildens storlek hålls konstant */
   .about-image {
     width: 400px;
     height: 400px;
   }
 }
-/* För mellan 1010px och 750px */
 @media (max-width: 1010px) and (min-width: 750px) {
   .about-image {
-    width: 300px; /* Justera för mellanstora skärmar */
+    width: 300px;
     height: 300px;
-    object-fit: cover; /* Bevara bildens proportioner */
+    object-fit: cover; 
   }
 }
 

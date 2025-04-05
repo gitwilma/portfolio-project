@@ -21,7 +21,7 @@ export default function Contact() {
     <div className="flex flex-col items-center px-4 py-10">
       <div className="flex flex-col sm:flex-row gap-8 w-full justify-center items-center">
         {/* Form circle */}
-        <div className="flex flex-col items-center justify-center w-76 h-76 sm:w-84 sm:h-84 md:w-96 md:h-96 rounded-full bg-[#000000] shadow-md p-4">
+        <div className="contact-circle flex flex-col items-center justify-center w-76 h-76 sm:w-84 sm:h-84 md:w-96 md:h-96 rounded-full bg-[#000000] shadow-md p-4">
           <form onSubmit={handleSubmit} className="space-y-2 text-center">
             <h3 className="text-sm sm:text-sm md:text-lg font-semibold font-[Poppins] text-[#D8B17D]">
               Contact Me
@@ -95,7 +95,7 @@ export default function Contact() {
         </div>
 
         {/* Info circle */}
-        <div className="flex flex-col items-center justify-center w-76 h-76 sm:w-64 sm:h-64 md:w-96 md:h-96 rounded-full bg-[#000000] shadow-md p-4">
+        <div className="contact-circle flex flex-col items-center justify-center w-76 h-76 sm:w-64 sm:h-64 md:w-96 md:h-96 rounded-full bg-[#000000] shadow-md p-4">
           <h3 className="text-xxs sm:text-xs md:text-2xl text-center font-bold font-[Poppins] text-[#D8B17D]">
             Contact Information
           </h3>
