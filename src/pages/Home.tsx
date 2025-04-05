@@ -3,14 +3,14 @@ import ConnectingLines from "../components/ConnectingLines";
 
 export default function Home() {
   return (
-    <div className="relative py-8">
+    <div className="relative py-16">
       {/* S-formad text – endast lg och upp */}
       <svg
         className="hidden lg:block"
         width="100%"
         height="500"
         viewBox="0 0 1000 500"
-        style={{ transform: "translateY(-50px)" }}
+        style={{ transform: "translateY(-80px)" }}
       >
         <path
           id="s-curve"
