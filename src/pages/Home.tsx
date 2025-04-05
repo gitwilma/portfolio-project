@@ -51,14 +51,13 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Connecting Lines – endast desktop */}
       <div className="hidden lg:block">
         <ConnectingLines />
       </div>
 
       {/* Cirklar */}
       <section>
-        <div className="cursor-pointer flex flex-col items-center lg:items-end">
+        <div className="cursor-pointer flex flex-col font-[Kiona-Regular] items-center lg:items-end">
           <Circle
             link="/about"
             text="About"
