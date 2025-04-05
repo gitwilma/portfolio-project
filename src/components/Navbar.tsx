@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
-import HamburgerMenu from "./HamburgerMenu"; // Importera den nya hamburgermenyn
+import HamburgerMenu from "./HamburgerMenu";
 
 export default function Navbar() {
   return (
     <nav className="bg-[#F7EFD8] font-[Kiona-Regular] text-2xl relative z-20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Hamburgermeny till vänster i mobilvyn */}
           <div className="lg:hidden flex items-center">
             <HamburgerMenu />
           </div>
+
           <Link
             to="/"
-            className="text-2xl font-bolder flex-grow text-center lg:text-left"
+            className="text-2xl font-bolder text-center lg:text-left block lg:inline-block ml-auto w-full"
           >
-            Wilma Håkansson
+            <span className="block lg:inline">Wilma</span>
+            <span className="block lg:inline">Håkansson</span>
           </Link>
 
           {/* Desktop meny */}
