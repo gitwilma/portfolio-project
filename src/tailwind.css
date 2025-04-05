@@ -31,12 +31,12 @@ body.dark .pulsing-bubble {
 }
 
 body.dark footer {
-  background-color: #F4E1C4 !important;
+  background-color: #3E2A2A !important;
 }
 
 body.dark footer p,
 body.dark footer a {
-  color: black !important;
+  color: #F4E1C4 !important;
 }
 
 body.dark footer a:hover {

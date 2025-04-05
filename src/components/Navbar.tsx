@@ -14,7 +14,7 @@ export default function Navbar() {
             to="/"
             className="text-2xl font-bolder text-center lg:text-left block lg:inline-block ml-auto w-full"
           >
-            <span className="block lg:inline">Wilma</span>
+            <span className="block lg:inline">Wilma </span>
             <span className="block lg:inline">Håkansson</span>
           </Link>
 
