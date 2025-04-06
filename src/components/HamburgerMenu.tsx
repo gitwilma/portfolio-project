@@ -37,7 +37,7 @@ const HamburgerMenu = () => {
       {/* Mobilmeny */}
       <div
         className={`lg:hidden ${
-          isMenuOpen ? "block" : "hidden"
+          isMenuOpen ? "menu-open block" : "hidden"
         } bg-[#F7EFD8] py-4 px-4 space-y-4 absolute top-16 left-0 right-0`}
       >
         <Link to="/" className="block text-xl text-center hover:text-gray-600">

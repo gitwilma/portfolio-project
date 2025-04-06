@@ -208,6 +208,11 @@ body.dark .project-link {
   }
 }
 
+/* Menu open */
+.dark .menu-open {
+  background-color:#1C0F13;
+}
+
 @media (max-width: 768px) {
   .form-circle .contact-circle {
     width: 90%; 
