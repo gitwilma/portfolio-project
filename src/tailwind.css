@@ -31,12 +31,12 @@ body.dark .pulsing-bubble {
 }
 
 body.dark footer {
-  background-color: #F4E1C4 !important;
+  background-color: #3E2A2A !important;
 }
 
 body.dark footer p,
 body.dark footer a {
-  color: black !important;
+  color: #F4E1C4 !important;
 }
 
 body.dark footer a:hover {
@@ -49,44 +49,39 @@ body.dark p {
 }
 
 /* Contact page */ 
-.halfmoon {
-  background-color: black; 
-  transition: background-color 0.3s, box-shadow 0.3s;
+.contact-circle {
+  background-color: #000000; 
+  transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
-body.dark .halfmoon {
+body.dark .contact-circle {
   background-color: #F4E1C4 !important; 
   box-shadow: 0 0 15px rgba(244, 161, 97, 0.7) !important; 
 }
 
-body.dark .halfmoon {
-  background-color: #F4E1C4 !important; 
-  box-shadow: none !important;
-}
-
-body.dark .halfmoon h3,
-body.dark .halfmoon p,
-body.dark .halfmoon label {
+body.dark .contact-circle label,
+body.dark .contact-circle h3,
+body.dark .contact-circle p {
   color: black !important; 
 }
 
-body.dark .halfmoon input,
-body.dark .halfmoon textarea {
+body.dark .contact-circle input,
+body.dark .contact-circle textarea {
   background-color: #6B5B4D; 
   border: 1px solid #8D7B68; 
   color: #FCEBD5; 
 }
 
-body.dark .halfmoon input::placeholder,
-body.dark .halfmoon textarea::placeholder {
+body.dark .contact-circle input::placeholder,
+body.dark .contact-circle textarea::placeholder {
   color: #C5A991; 
 }
 
-body.dark .halfmoon button {
+body.dark .contact-circle button {
   background-color: #D99A5C;
   color: #2D1B0D; 
 }
-
 
 .dark button {
   background-color: #D99A5C;
@@ -164,4 +159,105 @@ body.dark .project-link {
   .pulsing-bubble:nth-child(3) {
     animation-delay: 0.4s;
   }
-  
+
+@import "tailwindcss/preflight";
+
+@media (max-width: 768px) {
+
+  .pulsing-bubble {
+    width: 8px;
+    height: 8px;
+  }
+
+  .connecting-lines {
+    display: none; 
+  }
+
+  .home-text {
+    font-size: 24px;
+  }
+
+  .form-circle .contact-circle {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 360px) {
+  body {
+    font-size: 12px; 
+  }
+
+  .form-circle .contact-circle {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .home-text {
+    font-size: 18px; 
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Menu open */
+.dark .menu-open {
+  background-color:#1C0F13;
+}
+
+@media (max-width: 768px) {
+  .form-circle .contact-circle {
+    width: 90%; 
+    height: auto;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .home-text {
+    font-size: 24px;
+  }
+
+  .pulsing-bubble {
+    width: 8px;
+    height: 8px;
+  }
+
+  .connecting-lines {
+    display: none; 
+  }
+
+  .about-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+/* Mobilrespons */
+@media (max-width: 768px) {
+  .about-image {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px; 
+  }
+}
+
+@media (min-width: 768px) {
+  .about-image {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 1010px) and (min-width: 750px) {
+  .about-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; 
+  }
+}
+
+

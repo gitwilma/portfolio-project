@@ -3,13 +3,13 @@ import ConnectingLines from "../components/ConnectingLines";
 
 export default function Home() {
   return (
-    <div className="relative py-8">
-      {/* S-formad text */}
+    <div className="relative py-16">
       <svg
+        className="hidden lg:block"
         width="100%"
         height="500"
         viewBox="0 0 1000 500"
-        style={{ transform: "translateY(-50px)" }}
+        style={{ transform: "translateY(-80px)" }}
       >
         <path
           id="s-curve"
@@ -25,28 +25,50 @@ export default function Home() {
           fontFamily="NewYork"
           className="dark-text"
         >
-          <textPath href="#s-curve" startOffset="1%" textAnchor="start">
+          <textPath
+            href="#s-curve"
+            startOffset="1%"
+            textAnchor="start"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             Welcome to my portfolio!
           </textPath>
         </text>
       </svg>
 
-      <div className="absolute top-[200px] left-[250px]">
+      <div className="relative lg:absolute lg:top-[200px] lg:left-1/2 lg:-translate-x-[120%] left-1/2 -translate-x-1/2 flex flex-col items-center">
         <img
           src="/assets/cv-image.png"
           alt="CV Image"
-          className="rounded-full w-[300px] h-[300px]"
+          className="rounded-full w-full max-w-[260px] aspect-square md:max-w-[300px] md:w-[300px] md:h-[300px] object-cover"
         />
+
+        <p className="block lg:hidden text-center text-2xl font-[NewYork] mt-1 dark-text">
+          Welcome to my portfolio!
+        </p>
       </div>
 
-      {/* Connecting Lines */}
-      <ConnectingLines />
+      <div className="hidden lg:block">
+        <ConnectingLines />
+      </div>
 
       <section>
-        <div className="cursor-pointer flex flex-col items-end">
-          <Circle link="/about" text="About" className="ml-170 mt-20" />
-          <Circle link="/projects" text="Projects" className="ml-10 mt-5" />
-          <Circle link="/contact" text="Contact" className="ml-180 mt-5" />
+        <div className="cursor-pointer flex flex-col font-[Kiona-Regular] items-center lg:items-end">
+          <Circle
+            link="/about"
+            text="About"
+            className="lg:ml-170 lg:mt-10 mt-10"
+          />
+          <Circle
+            link="/projects"
+            text="Projects"
+            className="lg:ml-[-600px] mt-4 lg:mt-1"
+          />
+          <Circle
+            link="/contact"
+            text="Contact"
+            className="lg:ml-180 mt-4 lg:mt-1"
+          />
         </div>
       </section>
     </div>
