@@ -160,8 +160,6 @@ body.dark .project-link {
     animation-delay: 0.4s;
   }
 
-@import "tailwindcss/preflight";
-
 @media (max-width: 768px) {
 
   .pulsing-bubble {
