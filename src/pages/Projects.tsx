@@ -20,10 +20,8 @@ export default function Projects() {
         Here you'll find my latest work. More projects are in progress!
       </p>
 
-      {/* Flexbox för att centrera innehållet */}
       <div className="flex justify-center items-center">
         <div className="flex flex-col items-center group max-w-md">
-          {/* Text över projekt-cirkel */}
           <div className="mb-4 text-center max-w-xs">
             <h3 className="text-xl font-semibold font-[Poppins] mb-2">
               {projects[0].title}
@@ -33,7 +31,6 @@ export default function Projects() {
             </p>
           </div>
 
-          {/* Projekt-cirkel */}
           {projects[0].link ? (
             <a
               href={projects[0].link}

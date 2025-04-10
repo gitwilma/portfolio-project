@@ -161,9 +161,7 @@ body.dark .project-link {
   }
 
 @import "tailwindcss/preflight";
-@tailwind utilities;
 
-/* Anpassningar för mobilvy */
 @media (max-width: 768px) {
 
   .pulsing-bubble {
@@ -172,7 +170,7 @@ body.dark .project-link {
   }
 
   .connecting-lines {
-    display: none; /* Dölj linjer i mobilvy */
+    display: none; 
   }
 
   .home-text {

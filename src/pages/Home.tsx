@@ -4,7 +4,6 @@ import ConnectingLines from "../components/ConnectingLines";
 export default function Home() {
   return (
     <div className="relative py-16">
-      {/* S-formad text – endast lg och upp */}
       <svg
         className="hidden lg:block"
         width="100%"
@@ -37,7 +36,6 @@ export default function Home() {
         </text>
       </svg>
 
-      {/* CV-bild – centrerad i mobil + md, vänster i lg */}
       <div className="relative lg:absolute lg:top-[200px] lg:left-1/2 lg:-translate-x-[120%] left-1/2 -translate-x-1/2 flex flex-col items-center">
         <img
           src="/assets/cv-image.png"
@@ -45,7 +43,6 @@ export default function Home() {
           className="rounded-full w-full max-w-[260px] aspect-square md:max-w-[300px] md:w-[300px] md:h-[300px] object-cover"
         />
 
-        {/* Text under bilden – endast mobil */}
         <p className="block lg:hidden text-center text-2xl font-[NewYork] mt-1 dark-text">
           Welcome to my portfolio!
         </p>
@@ -55,13 +52,12 @@ export default function Home() {
         <ConnectingLines />
       </div>
 
-      {/* Cirklar */}
       <section>
         <div className="cursor-pointer flex flex-col font-[Kiona-Regular] items-center lg:items-end">
           <Circle
             link="/about"
             text="About"
-            className="lg:ml-170 lg:mt-10 mt-0"
+            className="lg:ml-170 lg:mt-10 mt-10"
           />
           <Circle
             link="/projects"
